@@ -1,0 +1,797 @@
+/* ESQUEMA: 
+selector/etiqueta {
+    propiedad: valor;
+} 
+    
+ORDEN JERARQUICO:
+!import
+id
+class
+selectores / etiquetas */
+
+/* Cambios globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* id header distribucción y color */
+#header {
+    height: 65px; /* altura fija igual que footer */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.774); /* azul translúcido */
+    position: relative;
+    top: 0; /* Anclado al borde superior */
+    left: 0;
+    z-index: 10;
+}
+
+/* class del logo de la página en header */
+#header .logo {
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+}
+
+/* id navBar horizontal */
+#navBar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+/* id navBar estilo de los hipervínculos */
+#navBar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* id navBar estilos de movimientos mouse */
+#navBar ul li a:hover {
+    color: #de46a6;
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+/* id navBar estilos sobre "active" en hipervínculos */
+#navBar ul li a.active {
+    color: #de46a6;
+    background: none; 
+}
+
+/* navBar/header con Bootstrap en página SOBRE MI */ 
+/* Configuración general del navbar */
+.bootstrapActive #header {
+    height: 65px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 40px;
+    z-index: 10;
+}
+
+.bootstrapActive #navBar.navbar {
+    width: 100%;
+    min-height: 65px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.bootstrapActive #navBar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.bootstrapActive #navBar .navbar-nav {
+    list-style: none;
+    
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto; /* Mueve el menú a la derecha */
+}
+
+.bootstrapActive #navBar .navbar-nav .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bootstrapActive #navBar .navbar-nav .nav-link:hover {
+    color: #de46a6;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bootstrapActive #navBar .navbar-nav .nav-link.active {
+    color: #de46a6;
+    background: none;
+}
+
+/* Configuración del botón hamburguesa */
+.navbar-toggler {
+    
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 5px;
+    z-index: 1031;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%23de46a6' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    width: 25px;
+    height: 25px;
+}
+
+/* Menú colapsable */
+.collapse.navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: right; /* Alinea enlaces a la derecha */
+    max-height: 90vh; /* Evita desbordamiento */
+    overflow-y: auto; /* Permite scroll */
+    position: fixed;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    z-index: 1030;
+}
+
+/* Media Queries para el botón hamburguesa */
+@media (min-width: 992px) {
+    .bootstrapActive #navBar .navbar-toggler {
+        display: none !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .bootstrapActive #navBar .navbar-toggler {
+        display: block !important;
+    }
+}
+
+/* Menú colapsable solo en pantallas pequeñas */
+@media (max-width: 991.98px) {
+    .collapse.navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 10px;
+        border-radius: 5px;
+        text-align: right; /* Alinea enlaces a la derecha */
+        max-height: 90vh; /* Evita desbordamiento */
+        overflow-y: auto; /* Permite scroll */
+        position: fixed;
+        top: 65px;
+        right: 0;
+        width: 100%;
+        z-index: 1030;
+    }
+}
+
+/* Remover o ajustar estilos que puedan interferir en pantallas grandes */
+@media (min-width: 992px) {
+    .collapse.navbar-collapse {
+        position: static;
+        width: auto;
+        background: transparent;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+
+/* Responsive para pantallas grandes - Solo afecta index.html y sobre-mi.html */
+@media (min-width: 1200px) {
+    /* Para index.html */
+    .bodyIndex #main {
+        display: flex; /* Activa el diseño flexible */
+        flex-direction: row; /* Coloca texto e imágenes en fila */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        gap: 50px; /* Espaciado entre texto e imágenes */
+        height: calc(100vh - 130px); /* Ajusta la altura según el viewport */
+    }
+
+    .bodyIndex .mainContainerSobreMi {
+        flex: 1; /* Permite que el texto ocupe más espacio */
+        max-width: 50%; /* Limita el ancho máximo */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .bodyIndex .asidePerfil {
+        flex: 1; /* Ajusta el tamaño del contenedor de imágenes */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+       /* Para sobre-mi.html */
+    .bootstrapActive #main {
+        display: flex; /* Activa el diseño flexible */
+        flex-direction: row; /* Coloca texto e imágenes en fila */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        gap: 50px; /* Espaciado entre texto e imágenes */
+        height: calc(100vh - 130px); /* Ajusta la altura según el viewport */
+    }
+
+    .bootstrapActive .mainContainerSobreMi {
+        flex: 1; /* Permite que el texto ocupe más espacio */
+        max-width: 50%; /* Limita el ancho máximo */
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .bootstrapActive .asidePerfil {
+        flex: 1; /* Ajusta el tamaño del contenedor de imágenes */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bootstrapActive .asidePerfil img {
+        max-width: 250px; /* Ajusta el tamaño de las imágenes */
+        margin-bottom: 20px; /* Espacio entre imágenes */
+    }
+}
+
+/* id body estilo letras */
+#body {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* configuración para que el video ocupe todo el fondo */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* configuración del main.container */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 130px);
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 10px;
+    overflow: hidden;
+}
+
+/* configuración del texto */
+.mainContainer {
+    flex: 13;
+    padding-right: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* configuración del aside */
+.asideContainer {
+    flex: 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* configuración de la imagen dentro del aside */
+.asideContainer img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    display: block;
+}
+
+/* estilo SOBRE MI */
+.containerSobreMi {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 1700px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Columna izquierda: Texto */
+.mainContainerSobreMi {
+    flex: 1; 
+    padding: 10px;
+}
+
+/* configuracion columna derecha: imágenes */
+.asidePerfil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding-top: 20px; 
+    padding-right: 10px; 
+}
+
+/* Configuración de las imágenes */
+.asidePerfil img {
+    max-width: 120px;
+    height: auto;
+}
+
+.tituloCP {
+    border-radius: 15px; 
+    max-width: 150px; 
+    height: auto; 
+    display: block; 
+}
+
+/* ESTILOS PÁGINA SKILLS con GRID*/
+.containerSkills {
+    display: grid; 
+    grid-template-columns: 70% 30%; 
+    gap: 10px; 
+    align-items: center; 
+    height: calc(100vh - 120px); 
+}
+
+.mainContainerSkills {
+    padding: 20px;
+}
+
+.imagenesGrid {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 10px; 
+    justify-items: stretch;
+    align-items: center;
+    margin-right: 20px;
+    /*se arma cuadro de grilla, aunque no se use el llamado grid-area:
+    grid-template-areas:
+        col#1     col#2    col#3
+/*fil#1 "excel    powerbi    sql"
+/*fil#2 "mongodb  python     git"
+/*fil#3 "github2    sap      vsc"*/
+}
+
+.imagenesGrid img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 0;
+    border: none; 
+    box-shadow: none; 
+    margin: 0px;
+    }
+
+/* animación sobre imagenes Skills */
+.imagenesGrid img:hover {
+    transform: scale(1.1);
+}
+
+/* ESTILOS página Proyectos con GRID */
+/* Caracteristicas de la página de Proyectos */
+.containerProyectos {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    padding: 20px 20px; 
+    max-width: 1200px; 
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Título principal */
+.tituloPrincipalProyectos {
+    font-size: 2rem;
+    font-family: Arial, sans-serif; 
+    color: #e46fb9;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Grilla de proyectos */
+.gridProyectos {
+    display: grid;
+    grid-template-areas:
+        "analytics sql mongodb"
+        "python engineer docencia";
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Asignación de áreas */
+.analytics {
+    grid-area: analytics;
+}
+
+.sql {
+    grid-area: sql;
+}
+
+.mongodb {
+    grid-area: mongodb;
+}
+
+.python {
+    grid-area: python;
+}
+
+.engineer {
+    grid-area: engineer;
+}
+
+.docencia {
+    grid-area: docencia;
+}
+
+/* Cajas de cada proyecto */
+.proyecto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d836a5;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 250px;
+    height: 170px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Estilo para los gif proyectos */
+.proyecto img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Características del texto y la flecha */
+.proyecto .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Estilo para el texto de proyectos */
+.proyecto .info p {
+    font-family: Arial, sans-serif;
+    font-size: 1rem; 
+    font-weight: bold; 
+    color: black;
+    margin: 0; 
+    text-align: center;
+}
+
+/* Estilo para el ícono de la flecha */
+.proyecto .info .flecha {
+    width: 20px; 
+    height: 20px;
+    display: inline-block; 
+    margin: 0; 
+    padding: 0; 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
+}
+
+/* Efecto hover para agrandar el ícono */
+.proyecto .info .flecha:hover {
+    transform: scale(1.2);
+}
+  
+/* class sobre títulos principales */
+.tituloPrincipal {
+    font-size: 3em;
+    color: #e46fb9;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* class sobre títulos secundarios */
+.tituloSecundario {
+    font-size: 2em;
+    color: #e46fb9; 
+    margin-bottom: 5px;
+}
+
+/* class sobre títulos terciarios con tipeo */
+h3.typing {
+    font-size: 1.2em;
+    color: #e46fb9;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+h3.typing .text {
+    display: inline-block;
+    white-space: nowrap; 
+    overflow: hidden;
+    width: 0;
+    animation: typingNew 4s steps(39, end) forwards; 
+}
+
+h3.typing .cursor {
+    border-right: 2px solid #e46fb9; 
+    width: 1px;
+    height: 1em;
+    animation: blinkNew 0.5s step-end infinite; 
+}
+
+/* Nueva animación de tipeo */
+@keyframes typingNew {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Nueva animación del cursor */
+@keyframes blinkNew {
+    from,
+    to {
+        border-color: transparent; /* cursor invisible */
+    }
+    50% {
+        border-color: #e46fb9; /* cursor visible */
+    }
+}
+
+/* class para el título principal con tipeo en index*/
+.tituloPrincipaltypewriter {
+    font-size: 3em;
+    color: #e46fb9;
+    white-space: nowrap; 
+    display: inline-flex; 
+    align-items: center;
+}
+
+.tituloPrincipaltypewriter .text {
+    display: inline-block; 
+    animation: typing 3s steps(13, end); 
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+.tituloPrincipaltypewriter .cursor {
+    border-right: 2px solid #e46fb9; 
+    width: 1px; 
+    height: 1em; 
+    animation: blink 0.5s step-end infinite; 
+    margin-left: 10px; 
+    margin-right: 15px; 
+}
+
+.botonSonido {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+.botonSonido img {
+    width: 35px; 
+    height: 35px;
+    vertical-align: middle; 
+}
+
+/* animación del tipeo */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: calc(13ch - 1ch);
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #e46fb9;
+    }
+}
+
+/* selector sobre texto de aplicación global */
+article p {
+    font-size: 1.2em;
+    color: white;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+/* selector aside de aplicación en index */
+.index .asideContainer {
+    flex: 1; /* 50% del espacio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /
+}
+
+/* selector de la imagen del aside de aplicación global */
+.asideContainer img {
+    max-width: 80%;
+    height: auto; 
+    border-radius: 10px;
+    display: block; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* class Estilo para la imagen en containerContacto */
+body.bodyContacto {
+    margin: 0; /* Sin márgenes generales */
+    padding: 0; /* Sin padding */
+    box-sizing: border-box;
+}
+
+.containerContacto {
+    padding: 0 15px; /* Aplica los márgenes como padding aquí */
+}
+
+
+.containerContacto section img {
+    float: right;
+    max-width: 230px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* selector sobre ubicación de Contacto */
+fieldset.contactame {
+    border: 2px solid #e46fb9;
+    border-radius: 10px;
+    background-color: rgba(228, 111, 185, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    color: white; 
+}
+
+/* selector de color texto cuadrado */
+fieldset.contactame legend {
+    color: #e46fb9;
+    font-weight: bold;
+    font-size: 1.5em; 
+}
+
+/* selector de organización del formulario */
+fieldset.contactame label {
+    display: block;
+    margin-bottom: 10px;
+    color: white; 
+}
+
+/* selector sobre formato del formulario */
+fieldset.contactame input, 
+fieldset.contactame textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e46fb9;
+    border-radius: 5px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: white; 
+    font-size: 1em;
+}
+
+/* selector formato de las teclas del formulario */
+fieldset.contactame input[type="submit"],
+fieldset.contactame input[type="reset"] {
+    width: auto; 
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #e46fb9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* selector color botones formulario al pasar mouse */
+fieldset.contactame input[type="submit"]:hover,
+fieldset.contactame input[type="reset"]:hover {
+    background-color: #d836a5; 
+}
+
+/* estilo sobre id footer */
+/* FOOTER - UNA SOLA FILA, TEXTO + ÍCONOS CENTRADOS EN LA PANTALLA */
+#footer {
+    width: 100%;
+    height: 65px; /* igual altura que el header */
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    align-items: center;         /* centra verticalmente los hijos */
+    justify-content: center;     /* centra en la pantalla como grupo */
+    flex-wrap: nowrap;           /* no se parten a otra línea */
+    /* text-align opcional; si quieres centrar el texto dentro de su contenedor */
+  }
+  
+  /* Contenedor del texto */
+  #footer .textFooter {
+    display: flex;               /* por si deseas alinear algo interno */
+    align-items: center;
+    margin-right: 2rem;          /* separa el texto de los iconos */
+  }
+  #footer .textFooter p {
+    margin: 0;                   /* quita margenes default de <p> */
+    text-align: center;          /* centra el texto dentro de su <p> */
+  }
+  
+  /* Contenedor de iconos */
+  #footer .iconosFooter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;                   /* espacio horizontal entre iconos */
+  }
+  
+  /* Tamaño y hover de iconos */
+  #footer .iconosFooter img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  #footer .iconosFooter img:hover {
+    transform: scale(1.2);
+  }
+ 
+/* {outline: 1px solid red; /* Temporal para identificar desbordamientos */

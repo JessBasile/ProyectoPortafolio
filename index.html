@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+    <title>Inicio | Jesica Basile</title>
+    
+    <script>
+        // función para girar el título en la pestaña
+        let titleText = " Inicio | Jesica Basile |";
+        let currentIndex = 0;
+
+        function scrollTitle() {
+            document.title = titleText.substring(currentIndex) + titleText.substring(0, currentIndex);
+            currentIndex = (currentIndex + 1) % titleText.length;
+        }
+        setInterval(scrollTitle, 200);
+    </script>
+</head>
+<body id="body" class="bodyIndex">
+    <video autoplay muted loop class="video-background">
+        <source src="videos/fondo.mp4" type="video/mp4">
+    </video>
+    <header id="header">
+        <a href="#"><img class="logo" src="./icons/logo.png" alt="Logo - Jess Basile" title="Logo Jess Basile"></a>
+        <nav id="navBar">   
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="pages/sobre-mi.html">Sobre Mi</a></li>
+                <li><a href="pages/skills.html">Skills</a></li>
+                <li><a href="pages/proyectos.html">Proyectos</a></li>
+                <li><a href="pages/formacion-academica.html">Formacion Academica</a></li>
+                <li><a href="pages/experiencia.html">Experiencia</a></li>
+                <li><a href="pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <main id="main" class="container">
+            <section class="mainContainer">
+                <article>
+                    <p>¡Bienvenido/a! Mi nombre es</p>
+                </article>
+                <h1 class="tituloPrincipaltypewriter">
+                    <span class="text">Jesica Basile</span>
+                    <span class="cursor"></span>
+                    <button class="botonSonido">
+                        <img src="icons/botonSonido.png" alt="Reiniciar">
+                    </button>
+                </h1>                
+                <article>
+                    <p>Soy Contadora Pública, Analista de datos y Docente Universitaria con más de 11 años de experiencia en el área de finanzas. Mi pasión por el análisis de datos marcó un antes y un después en mi trayectoria profesional, motivándome  a explorar nuevas tecnologías y motores sobre distintos lenguajes que permitan analizar grandes volúmenes de datos. Me encuentro en constante capacitación para profundizar en el mundo IT y dar el salto hacia la ingeniería de datos.
+                        Mi carrera está definida por un fuerte compromiso con el aprendizaje continuo, la adaptación a tecnologías emergentes y la búsqueda de soluciones innovadoras en un entorno dinámico.</p>
+                </article>
+            </section>
+        <aside class="asideContainer">
+            <img src="./images/jess.png" alt="Imagen Jess" title="Imagen Jess"> 
+        </aside>
+    </main>
+
+    <footer id="footer">
+        <section class="textFooter">
+            <p>&copy; 2024 Jess Basile | Todos los derechos reservados</p>
+        </section>
+        <section class="iconosFooter">
+            <a href="https://www.linkedin.com/in/jesica-basile-749b46b3" target="_blank">
+            <img src="./icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
+            <a href="https://github.com/JessBasile" target="_blank">
+                <img src="./icons/github.png" alt="GitHub" title="GitHub"></a>
+            <a href="mailto:jessbrenba@gmail.com">
+                <img src="./icons/email.png" alt="Correo" title="Correo Electrónico"></a>
+            <a href="https://www.facebook.com/jess.basile.1" target="_blank">
+                    <img src="./icons/facebook.png" alt="Facebook" title="Facebook"></a>
+            <a href="https://www.instagram.com/jessbasiile/?igsh=MTBla2p5ZjRiZG1kaQ%3D%3D" target="_blank">
+                    <img src="./icons/instagram.png" alt="Instagram" title="Instagram"></a>        
+        </section>        
+    </footer> 
+    <script>
+        // configuración del audio para el tituloPrincipaltypewriter
+        const textElement = document.querySelector('.text');
+        const typingSound = new Audio('typewriter.mp3');
+        const typingDuration = 3000;
+    
+        document.querySelector('.botonSonido').addEventListener('click', () => {
+            textElement.style.animation = 'none';
+            void textElement.offsetWidth;
+            textElement.style.animation = 'typing 3s steps(13, end)';
+    
+            typingSound.currentTime = 0;
+            typingSound.play().catch((error) => console.log('Error al reproducir el sonido:', error));
+
+            setTimeout(() => {
+                typingSound.pause();
+                typingSound.currentTime = 0;
+            }, typingDuration);
+        });
+    </script>      
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Jess Basile</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../icons/favicon.ico" type="image/x-icon">
+    <script>
+        // Función para desplazar el título de la pestaña
+        let titleText = " Skills | Jess Basile |";
+        let currentIndex = 0;
+
+        function scrollTitle() {
+            // Desplazar el texto hacia la izquierda y repetir el ciclo
+            document.title = titleText.substring(currentIndex) + titleText.substring(0, currentIndex);
+            currentIndex = (currentIndex + 1) % titleText.length;
+        }
+
+        // Ejecutar la función cada 200 ms
+        setInterval(scrollTitle, 200);
+    </script>
+</head>
+<body id="body">
+        <video autoplay muted loop class="video-background">
+            <source src="../videos/fondo3.mp4" type="video/mp4">
+        </video>
+    <header id="header">
+        <a href="../index.html"><img class="logo" src="../icons/logo.png" alt="Logo - Jess Basile" title="Logo Jess Basile"></a>
+        <nav id="navBar">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./sobre-mi.html">Sobre Mi</a></li>
+                <li><a href="#" class="active">Skills</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./formacion-academica.html">Formacion Academica</a></li>
+                <li><a href="./experiencia.html">Experiencia</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav> 
+    </header>
+    <main id="main" class="containerSkills">
+        <section class="mainContainerSkills">
+            <h1 class= "tituloPrincipal">SKILLS</h1>
+            <article>
+                <p>Agregar texto aquí que detalle todas las tecnologías dominadas (se agregarán logos de todas las tecnologías dominadas en aside).</p>
+            </article>
+        </section>
+        <section class="imagenesGrid">
+            <img src="../icons/excel.png" alt="Skill Excel" title="Skill Excel">
+            <img src="../icons/powerbi.png" alt="Skill PBI" title="Skill PBI">
+            <img src="../icons/sql.png" alt="Skill SQL" title="Skill SQL">
+            <img src="../icons/mongodb.png" alt="Skill MongoDB" title="Skill MongoDB">
+            <img src="../icons/python.png" alt="Skill Python" title="Skill Python">
+            <img src="../icons/git.png" alt="Skill Git" title="Skill Git">
+            <img src="../icons/github2.png" alt="Skill GitHub" title="Skill GitHub">
+            <img src="../icons/sap.png" alt="Skill SAP" title="Skill SAP">
+            <img src="../icons/vsc.png" alt="Skill Visual Studio Code" title="Skill Visual Studio Code">
+        </section>
+    </main>
+
+    <footer id="footer">
+        <section class="textFooter">
+            <p>&copy; 2024 Jess Basile | Todos los derechos reservados</p>
+        </section>
+        <section class="iconosFooter">
+            <a href="https://www.linkedin.com/in/jesica-basile-749b46b3" target="_blank">
+            <img src="../icons/linkedin.png" alt="LinkedIn" title="LinkedIn"></a>
+            <a href="https://github.com/JessBasile" target="_blank">
+                <img src="../icons/github.png" alt="GitHub" title="GitHub"></a>
+            <a href="mailto:jessbrenba@gmail.com">
+                <img src="../icons/email.png" alt="Correo" title="Correo Electrónico"></a>
+            <a href="https://www.facebook.com/jess.basile.1" target="_blank">
+                    <img src="../icons/facebook.png" alt="Facebook" title="Facebook"></a>
+            <a href="https://www.instagram.com/jessbasiile/?igsh=MTBla2p5ZjRiZG1kaQ%3D%3D" target="_blank">
+                    <img src="../icons/instagram.png" alt="Instagram" title="Instagram"></a>        
+        </section>   
+    </footer>
+</body>
+</html>

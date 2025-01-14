@@ -74,7 +74,7 @@ selectores / etiquetas */
     background: none; 
 }
 
-/* navBar/header con Bootstrap en página SOBRE MI */ 
+/* navBar/header con Bootstrap en página SOBRE MI y PROYECTOS*/ 
 /* Configuración general del navbar */
 .bootstrapActive #header {
     height: 65px;
@@ -205,26 +205,9 @@ selectores / etiquetas */
     }
 }
 
-
-/* Responsive para pantallas grandes - Solo afecta index.html y sobre-mi.html */
+/* Responsive para pantallas grandes */
 @media (min-width: 1200px) {
-    /* Para index.html */
-    .bodyIndex #main {
-        display: flex; /* Activa el diseño flexible */
-        flex-direction: row; /* Coloca texto e imágenes en fila */
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-        gap: 50px; /* Espaciado entre texto e imágenes */
-        height: calc(100vh - 130px); /* Ajusta la altura según el viewport */
-    }
-
-    .bodyIndex .mainContainerSobreMi {
-        flex: 1; /* Permite que el texto ocupe más espacio */
-        max-width: 50%; /* Limita el ancho máximo */
-        text-align: left; /* Alinea el texto a la izquierda */
-    }
-
-    .bodyIndex .asidePerfil {
+    .body .asidePerfil {
         flex: 1; /* Ajusta el tamaño del contenedor de imágenes */
         display: flex;
         flex-direction: column;
@@ -244,7 +227,7 @@ selectores / etiquetas */
 
     .bootstrapActive .mainContainerSobreMi {
         flex: 1; /* Permite que el texto ocupe más espacio */
-        max-width: 50%; /* Limita el ancho máximo */
+        max-width: 100%; /* Limita el ancho máximo */
         text-align: left; /* Alinea el texto a la izquierda */
     }
 
@@ -332,7 +315,7 @@ selectores / etiquetas */
     display: flex;
     align-items: center;
     gap: 10px;
-    max-width: 1700px;
+    max-width: 2000px;
     margin: 0 auto;
     width: 100%;
 }
@@ -430,6 +413,8 @@ selectores / etiquetas */
     color: #e46fb9;
     text-align: center;
     margin-bottom: 20px;
+    max-width: 1200px; /* Limita el ancho del título en pantallas grandes */
+    font-weight: bold;
 }
 
 /* Grilla de proyectos */
@@ -486,6 +471,15 @@ selectores / etiquetas */
     box-sizing: border-box;
 }
 
+.sectionProyectos {
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Opcional: centra verticalmente si es necesario */
+    padding: 20px;
+    max-width: 1200px; /* Limita el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
 /* Estilo para los gif proyectos */
 .proyecto img {
     width: 100%;
@@ -528,7 +522,18 @@ selectores / etiquetas */
 .proyecto .info .flecha:hover {
     transform: scale(1.2);
 }
-  
+
+/* RESPONSIVE en grilla PROYECTOS */
+@media (max-width: 765px){
+    .gridProyectos {
+        grid-template-areas:
+        "analytics  sql"
+        "mongodb   python"
+        "engineer docencia";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 /* class sobre títulos principales */
 .tituloPrincipal {
     font-size: 3em;
@@ -544,7 +549,7 @@ selectores / etiquetas */
     margin-bottom: 5px;
 }
 
-/* class sobre títulos terciarios con tipeo */
+/* class sobre títulos terciarios con tipeo SOBRE MI */
 h3.typing {
     font-size: 1.2em;
     color: #e46fb9;
@@ -590,7 +595,7 @@ h3.typing .cursor {
     }
 }
 
-/* class para el título principal con tipeo en index*/
+/* class para el título principal con tipeo en INDEX*/
 .tituloPrincipaltypewriter {
     font-size: 3em;
     color: #e46fb9;
@@ -676,15 +681,14 @@ article p {
 
 /* class Estilo para la imagen en containerContacto */
 body.bodyContacto {
-    margin: 0; /* Sin márgenes generales */
-    padding: 0; /* Sin padding */
+    margin: 0; 
+    padding: 0;
     box-sizing: border-box;
 }
 
 .containerContacto {
     padding: 0 15px; /* Aplica los márgenes como padding aquí */
 }
-
 
 .containerContacto section img {
     float: right;
@@ -752,36 +756,35 @@ fieldset.contactame input[type="reset"]:hover {
     background-color: #d836a5; 
 }
 
-/* estilo sobre id footer */
-/* FOOTER - UNA SOLA FILA, TEXTO + ÍCONOS CENTRADOS EN LA PANTALLA */
+/* ESTILOS sobre FOOTER */
 #footer {
     width: 100%;
     height: 65px; /* igual altura que el header */
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     display: flex;
-    align-items: center;         /* centra verticalmente los hijos */
-    justify-content: center;     /* centra en la pantalla como grupo */
-    flex-wrap: nowrap;           /* no se parten a otra línea */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
     /* text-align opcional; si quieres centrar el texto dentro de su contenedor */
   }
   
   /* Contenedor del texto */
   #footer .textFooter {
-    display: flex;               /* por si deseas alinear algo interno */
+    display: flex; 
     align-items: center;
-    margin-right: 2rem;          /* separa el texto de los iconos */
+    margin-right: 2rem; 
   }
   #footer .textFooter p {
-    margin: 0;                   /* quita margenes default de <p> */
-    text-align: center;          /* centra el texto dentro de su <p> */
+    margin: 0;
+    text-align: center;
   }
   
   /* Contenedor de iconos */
   #footer .iconosFooter {
     display: flex;
     align-items: center;
-    gap: 1rem;                   /* espacio horizontal entre iconos */
+    gap: 1rem;   
   }
   
   /* Tamaño y hover de iconos */

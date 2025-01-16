@@ -309,59 +309,87 @@ selectores / etiquetas */
     display: block;
 }
 
+/* Responsive del INDEX */
 /* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
     /* Contenedor principal */
     .container {
-        flex-direction: column; /* Coloca el texto sobre la imagen */
-        align-items: center !important; /* Centra los elementos */
-        gap: 0px !important; /* Espaciado entre texto e imagen */
-        padding: 0 10px !important; /* Reduce el padding general del contenedor */
+        flex-direction: column !important; 
+        align-items: center !important; 
+        gap: 5px !important; 
+        padding: 0 10px !important; 
+        min-height: 100vh !important; 
+        display: flex !important; 
+        justify-content: center; 
     }
 
     /* Título principal */
     .tituloPrincipaltypewriter {
-        font-size: 1.3rem !important; /* Reduce el tamaño del texto */
-        text-align: center !important; /* Centra el texto */
+        font-size: 1.rem !important; 
+        text-align: center !important; 
     }
 
     /* Botón de sonido */
     .botonSonido img {
-        width: 20px !important; /* Reduce el tamaño del botón */
+        width: 20px !important; 
         height: 20px !important;
     }
 
     /* Aside para la imagen */
     .asideContainer img {
-        max-width: 35% !important; /* Reduce el tamaño máximo de la imagen al 70% del contenedor */
-        height: auto !important; /* Mantiene las proporciones */
-        margin-bottom: 5px !important; /* Añade un pequeño margen inferior */
-            }
-
-    article p {
-        font-size: 0.9em !important; /* Reduce el tamaño del texto */
-        line-height: 1 !important; /* Ajusta el interlineado para que sea más compacto */
-        text-align: justify !important; /* Mantén el texto justificado */
-        margin-top: 10px !important;
+        margin-bottom: 5px !important; 
+        max-width: 50% !important; 
+        height: auto !important; 
+        margin-top: 2em !important; 
     }
 
-    body {
-        max-width: 100% !important; /* Reduce ligeramente el ancho */
-        margin: 0 auto !important;
+    article p {
+        font-size: 0.9em !important; 
+        line-height: 1 !important; 
+        text-align: justify !important; 
+        margin-bottom: 20px !important; 
+        margin-top: 10px !important; 
     }
 }
 
-@media (min-width: 771px) and (max-width: 991px) {
-    /* Texto principal */
-    .mainContainer {
-        flex: 100% !important; /* El texto ocupa el 60% del espacio */
-        font-size: 0.55rem !important; /* Texto más pequeño */
-        line-height: 1.3; /* Mantén buena legibilidad */
+/* Media Query para pantallas intermedias */
+@media (min-width: 769px) and (max-width: 991px) {
+    .container {
+        flex-direction: column !important; 
+        align-items: center !important; 
+        gap: 5px !important; 
+        padding: 0 10px !important; 
+        min-height: 100vh !important; 
+        display: flex !important; 
+        justify-content: center; 
     }
+
     /* Título principal */
     .tituloPrincipaltypewriter {
-        font-size: 1.1rem !important; /* Reduce el tamaño del texto */
-        text-align: center !important; /* Centra el texto */
+        font-size: 1.rem !important; 
+        text-align: center !important; 
+    }
+
+    /* Botón de sonido */
+    .botonSonido img {
+        width: 25px !important; 
+        height: 25px !important;
+    }
+
+    /* Aside para la imagen */
+    .asideContainer img {
+        margin-bottom: 5px !important; 
+        max-width: 50% !important; 
+        height: auto !important; 
+        margin-top: 2em !important; 
+    }
+
+    article p {
+        font-size: 0.85em !important; 
+        line-height: 1 !important; 
+        text-align: justify !important; 
+        margin-bottom: 20px !important; 
+        margin-top: 10px !important; 
     }
 }
 
@@ -527,12 +555,12 @@ selectores / etiquetas */
 }
 
 .sectionProyectos {
-    display: flex; /* Usa flexbox para centrar el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Opcional: centra verticalmente si es necesario */
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
     padding: 20px;
-    max-width: 1200px; /* Limita el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor en la página */
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 /* Estilo para los gif proyectos */

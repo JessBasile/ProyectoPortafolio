@@ -244,7 +244,6 @@ selectores / etiquetas */
 
 /* configuración del texto */
 .mainContainer {
-    padding-right: 20px;
     box-sizing: border-box;
     overflow: hidden;
     width: 100%; /* Ocupa todo el ancho */
@@ -275,7 +274,7 @@ article p {
     text-align: justify !important; 
     margin-bottom: 10px !important; 
     margin-top: 10px !important;
-    padding-left: 20px;
+    padding-left: 0px;
     padding-right: 0px; 
 }
 
@@ -338,7 +337,6 @@ article p {
     }
 }
 
-
 /* Media Query para pantallas intermedias */
 @media (min-width: 768px) and (max-width: 992px) {
     .container {
@@ -389,7 +387,7 @@ article p {
     display: flex;
     align-items: center;
     gap: 10px;
-    max-width: 2000px;
+    max-width: 100%;
     margin: 0 auto;
     width: 100%;
 }
@@ -407,15 +405,16 @@ article p {
     align-items: flex-end;
     gap: 20px;
     padding-top: 20px; 
-    padding-right: 20px; 
+    padding-right: 10px;
+    max-height: calc(100vh - 65px); /* Resta la altura del footer (65px) */
 }
 
 /* Configuración de las imágenes */
 .asidePerfil img {
     max-width: 120px;
     height: auto;
-    padding-top: 20px; 
-    padding-right: 20px;
+    padding-top: 10px; 
+    padding-right: 10px;
 }
 
 .tituloCP {
@@ -435,9 +434,95 @@ article p {
     padding-right: 20px; 
 }
 
-.mainContainerSobreMi p {
+.mainContainerSobreMi article p {
     padding-left: 20px;
-    padding-right: 20px;
+}
+
+/* RESPONSIVE para SOBRE MI */
+@media (max-width: 768px) {
+    .containerSobreMi {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centra todo horizontalmente */
+        gap: 15px; /* Espacio entre elementos */
+        padding: 10px; /* Ajusta el espacio interior */
+    }
+
+    .mainContainerSobreMi {
+        flex: none; /* Elimina el comportamiento de flex-grow */
+        padding: 10px 15px; /* Ajusta los márgenes internos */
+        text-align: justify; /* Mantén el texto justificado */
+        width: 100%; /* Ocupa todo el ancho */
+        font-size: 1.em !important;
+    }
+
+    .asidePerfil {
+        flex-direction: row; /* Cambia las imágenes a una fila */
+        justify-content: center; /* Centra las imágenes */
+        align-items: center; /* Alinea verticalmente */
+        gap: 10px; /* Reduce el espacio entre imágenes */
+        padding: 10px 0; /* Ajusta los márgenes */
+    }
+
+    .asidePerfil img {
+        max-width: 80px; /* Reduce el tamaño de las imágenes */
+        height: auto; /* Mantén la proporción */
+        margin: 0 auto; /* Centra las imágenes */
+    }
+
+    .tituloCP {
+        max-width: 80px; /* Reduce el tamaño en pantallas pequeñas */
+        height: auto; /* Mantén la proporción */
+    }
+
+    .mainContainerSobreMi p {
+        font-size: 0.9em; /* Reduce el tamaño del texto */
+        line-height: 1.5; /* Mejora la legibilidad */
+        padding-left: 0 !important;
+    }
+
+    .mainContainerSobreMi .tituloPrincipal {
+        font-size: 1.5rem;
+        padding-left: 0px;
+    }
+
+    .mainContainerSobreMi .typing {
+        padding-left: 0px;
+        text-align: left; /* Alinea el texto al inicio para sincronizar con el cursor */
+        margin: 0 auto; /* Opcional: centra el bloque de texto dentro de su contenedor */
+        width: fit-content; /* Ajusta el ancho del contenedor al texto exacto */
+        display: inline-block; /* Asegura que el bloque ocupe solo el espacio del texto */
+    }
+
+    h3.typing {
+        font-size: 1em; /* Ajuste del tamaño del texto */
+        text-align: center; /* Centra el texto */
+        white-space: nowrap; /* Evita quiebres en el texto */
+    }
+
+    h3.typing .text {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        width: auto; /* Ajusta dinámicamente el ancho al contenido */
+        animation: typingNew 4s steps(39, end) forwards; /* Mantiene la animación original */
+    }
+
+    h3.typing .cursor {
+        border-right: 2px solid #e46fb9; 
+        width: 1px;
+        height: 1em;
+        animation: blinkNew 0.5s step-end infinite; /* Cursor parpadeante sin cambios */
+    }
+}
+
+/* Nueva animación de tipeo ajustada para responsive */
+@keyframes typingResponsive {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Asegura que termine justo al final del texto */
+    }
 }
 
 /* Responsive para pantallas grandes */
@@ -488,16 +573,14 @@ article p {
     min-height: calc(100vh - 65px); /* 100vh menos la altura del footer */
 }
 
-.mainContainerSkills article {
-    padding-left: 10px;
+.mainContainerSkills .tituloPrincipal {
+    padding-left: 20px;
     padding-right: 20px;
-    text-align: justify;
 }
 
-.mainContainerSkills .tituloPrincipal {
-    padding-left: 30px;
+.mainContainerSkills p {
+    padding-left: 20px;
     padding-right: 20px;
-    text-align: justify;
 }
 
 .imagenesGrid {
@@ -565,16 +648,8 @@ article p {
         margin-bottom: 0px;
     }
 
-    .mainContainerSkills article {
-        padding-left: 0px;
-        padding-right: 20px;
-        text-align: justify;
-    }
-
     .mainContainerSkills .tituloPrincipal {
         padding-left: 20px;
-        padding-right: 20px;
-        text-align: justify;
     }
 }
 
@@ -725,6 +800,7 @@ article p {
     color: #e46fb9;
     margin-bottom: 20px;
     font-weight: bold;
+
 }
 
 /* class sobre títulos secundarios */
@@ -788,8 +864,6 @@ h3.typing .cursor {
     display: inline-flex; 
     align-items: center;
     font-weight: bold;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
 .tituloPrincipaltypewriter .text {

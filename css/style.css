@@ -74,7 +74,7 @@ selectores / etiquetas */
     background: none; 
 }
 
-/* navBar/header con Bootstrap en página SOBRE MI y PROYECTOS*/ 
+/* navBar/header con Bootstrap*/ 
 /* Configuración general del navbar */
 .bootstrapActive #header {
     height: 65px;
@@ -285,18 +285,18 @@ article p {
         display: flex !important; 
         flex-direction: column !important; 
         align-items: center !important; 
-        justify-content: space-around; /* Distribuye los elementos uniformemente */
+        justify-content: space-around; 
         gap: 10px !important; 
         padding: 20px !important; 
-        min-height: 100vh !important; /* Altura mínima de la pantalla */
-        box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+        min-height: 100vh !important; 
+        box-sizing: border-box; 
     }
 
     /* Título principal */
     .tituloPrincipaltypewriter {
         font-size: 25px !important; 
         text-align: center !important;
-        margin-bottom: 10px !important; /* Espaciado inferior */
+        margin-bottom: 10px !important; 
     }
 
     /* Botón de sonido */
@@ -307,10 +307,10 @@ article p {
 
     /* Contenedor del texto */
     article {
-        flex-grow: 1; /* Hace que el contenido del texto llene el espacio restante */
+        flex-grow: 1; 
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Centra el texto verticalmente dentro del espacio asignado */
+        justify-content: center; 
         text-align: justify !important;
     }
 
@@ -327,13 +327,13 @@ article p {
         margin-bottom: 5px !important; 
         max-width: 50% !important; 
         height: auto !important; 
-        margin-top: auto; /* Margen dinámico superior */
-        margin-bottom: auto; /* Margen dinámico inferior */
+        margin-top: auto; 
+        margin-bottom: auto; 
     }
 
     /* Footer */
     #footer {
-        margin-top: auto; /* Empuja el footer hacia el final */
+        margin-top: auto; 
     }
 }
 
@@ -406,7 +406,7 @@ article p {
     gap: 20px;
     padding-top: 20px; 
     padding-right: 10px;
-    max-height: calc(100vh - 65px); /* Resta la altura del footer (65px) */
+    max-height: calc(100vh - 65px) !important; 
 }
 
 /* Configuración de las imágenes */
@@ -419,9 +419,12 @@ article p {
 
 .tituloCP {
     border-radius: 15px; 
-    max-width: 150px; 
+    max-width: 155px; 
     height: auto; 
     display: block; 
+    margin: 0 auto; 
+    box-shadow: none; 
+    object-fit: cover; /
 }
 
 .mainContainerSobreMi .tituloPrincipal {
@@ -441,42 +444,45 @@ article p {
 /* RESPONSIVE para SOBRE MI */
 @media (max-width: 768px) {
     .containerSobreMi {
-        flex-direction: column; /* Cambia de fila a columna */
-        align-items: center; /* Centra todo horizontalmente */
-        gap: 15px; /* Espacio entre elementos */
-        padding: 10px; /* Ajusta el espacio interior */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px;
+        padding: 10px; 
+        min-height: auto !important; 
     }
 
     .mainContainerSobreMi {
-        flex: none; /* Elimina el comportamiento de flex-grow */
-        padding: 10px 15px; /* Ajusta los márgenes internos */
-        text-align: justify; /* Mantén el texto justificado */
-        width: 100%; /* Ocupa todo el ancho */
+        flex: none; 
+        padding: 10px 15px; 
+        text-align: justify; 
+        width: 100%; 
         font-size: 1.em !important;
+
     }
 
     .asidePerfil {
-        flex-direction: row; /* Cambia las imágenes a una fila */
-        justify-content: center; /* Centra las imágenes */
-        align-items: center; /* Alinea verticalmente */
-        gap: 10px; /* Reduce el espacio entre imágenes */
-        padding: 10px 0; /* Ajusta los márgenes */
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 10px; 
+        padding: 10px 0; 
+        
     }
 
     .asidePerfil img {
-        max-width: 80px; /* Reduce el tamaño de las imágenes */
-        height: auto; /* Mantén la proporción */
-        margin: 0 auto; /* Centra las imágenes */
+        max-width: 90px; 
+        height: auto; 
+        margin: 0 auto; 
     }
 
     .tituloCP {
-        max-width: 80px; /* Reduce el tamaño en pantallas pequeñas */
-        height: auto; /* Mantén la proporción */
+        max-width: 80px; 
+        height: auto; 
     }
 
     .mainContainerSobreMi p {
-        font-size: 0.9em; /* Reduce el tamaño del texto */
-        line-height: 1.5; /* Mejora la legibilidad */
+        font-size: 0.9em; 
+        line-height: 1.5; 
         padding-left: 0 !important;
     }
 
@@ -487,31 +493,36 @@ article p {
 
     .mainContainerSobreMi .typing {
         padding-left: 0px;
-        text-align: left; /* Alinea el texto al inicio para sincronizar con el cursor */
-        margin: 0 auto; /* Opcional: centra el bloque de texto dentro de su contenedor */
-        width: fit-content; /* Ajusta el ancho del contenedor al texto exacto */
-        display: inline-block; /* Asegura que el bloque ocupe solo el espacio del texto */
+        text-align: left; 
+        margin: 0 auto; 
+        width: fit-content; 
+        display: inline-block; 
     }
 
     h3.typing {
-        font-size: 1em; /* Ajuste del tamaño del texto */
-        text-align: center; /* Centra el texto */
-        white-space: nowrap; /* Evita quiebres en el texto */
+        font-size: 1em; 
+        text-align: center; 
+        white-space: nowrap; 
     }
 
     h3.typing .text {
         display: inline-block;
         white-space: nowrap;
         overflow: hidden;
-        width: auto; /* Ajusta dinámicamente el ancho al contenido */
-        animation: typingNew 4s steps(39, end) forwards; /* Mantiene la animación original */
+        width: auto; 
+        animation: typingNew 4s steps(39, end) forwards; 
     }
 
     h3.typing .cursor {
         border-right: 2px solid #e46fb9; 
         width: 1px;
         height: 1em;
-        animation: blinkNew 0.5s step-end infinite; /* Cursor parpadeante sin cambios */
+        animation: blinkNew 0.5s step-end infinite; 
+    }
+
+    /* Footer */
+    footer {
+        margin-top: auto; 
     }
 }
 
@@ -537,21 +548,21 @@ article p {
 
     /* Para sobre-mi.html */
     .bootstrapActive #main {
-        display: flex; /* Activa el diseño flexible */
-        flex-direction: row; /* Coloca texto e imágenes en fila */
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-        gap: 15px; /* Espaciado entre texto e imágenes */
-        height: calc(100vh - 130px); /* Ajusta la altura según el viewport */
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 15px;
+        height: calc(100vh - 130px); 
     }
 
     .bootstrapActive .mainContainerSobreMi {
-        flex: 4; /* Permite que el texto ocupe más espacio */
-        max-width: 100%; /* Limita el ancho máximo */
+        flex: 4; 
+        max-width: 100%; 
     }
 
     .bootstrapActive .asidePerfil {
-        flex: 1; /* Ajusta el tamaño del contenedor de imágenes */
+        flex: 1; 
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -559,8 +570,8 @@ article p {
     }
 
     .bootstrapActive .asidePerfil img {
-        max-width: 250px; /* Ajusta el tamaño de las imágenes */
-        margin-bottom: 20px; /* Espacio entre imágenes */
+        max-width: 240px; 
+        margin-bottom: 20px; 
     }
 }
 
@@ -570,7 +581,7 @@ article p {
     grid-template-columns: 70% 30%; 
     gap: 10px; 
     align-items: center; 
-    min-height: calc(100vh - 65px); /* 100vh menos la altura del footer */
+    min-height: calc(100vh - 65px); 
 }
 
 .mainContainerSkills .tituloPrincipal {
@@ -618,33 +629,33 @@ article p {
 /* RESPONSIVE para SKILLS */
 @media (max-width: 768px) {
     .containerSkills {
-        grid-template-columns: 1fr; /* Solo una columna */
-        grid-template-rows: auto auto; /* Dos filas: texto arriba y grilla abajo */
-        gap: 10px; /* Reduce el espacio entre filas */
-        height: auto; /* Ajusta la altura al contenido */
-        min-height: auto; /* Permite crecimiento dinámico */
-        margin-bottom: 10px; /* Reduce el espacio debajo del contenido */
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto auto; 
+        gap: 10px; 
+        height: auto; 
+        min-height: auto; 
+        margin-bottom: 10px; 
     }
 
     .mainContainerSkills {
-        order: 1; /* Mantén el texto arriba */
-        padding: 10px; /* Ajusta los márgenes internos */
+        order: 1; 
+        padding: 10px; 
     }
 
     .imagenesGrid {
-        order: 2; /* Posiciona la grilla abajo */
-        display: grid; /* Mantiene el diseño de grilla */
-        grid-template-columns: 1fr 1fr; /* Dos columnas */
-        gap: 10px; /* Reduce el espaciado entre los elementos */
-        margin-right: 0; /* Elimina márgenes innecesarios */
+        order: 2; 
+        display: grid; 
+        grid-template-columns: 1fr 1fr; 
+        gap: 10px; 
+        margin-right: 0; 
     }
 
     .imagenesGrid img {
-        width: 70%; /* Reduce el tamaño de las imágenes */
-        max-width: 120px; /* Limita el ancho máximo */
-        height: auto; /* Mantiene la proporción */
-        margin: 0 auto; /* Centra las imágenes */
-        display: block; /* Comportamiento como bloque */
+        width: 70%; 
+        max-width: 120px; 
+        height: auto; 
+        margin: 0 auto; 
+        display: block; 
         margin-bottom: 0px;
     }
 
@@ -794,13 +805,210 @@ article p {
     }
 }
 
+/* ESTILOS para Formación Académica */
+/* Contenedor del texto e ícono */
+.textoConIcono {
+    font-family: Arial, sans-serif;
+    color: white;
+    font-size: 14px;
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    line-height: 1.5; 
+    text-align: justify;
+}
+
+/* Estilo del ícono */
+.textoConIcono .icono img {
+    width: 100px; 
+    height: 100px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease; 
+}
+
+/* Asegura que el ícono se posicione en el centro */
+.textoConIcono .icono {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* Efecto hover en el ícono */
+.textoConIcono .icono img:hover {
+    transform: scale(1.3); 
+}
+
+.tituloPrincipal img {
+    max-width: 60px; 
+    height: auto; 
+    vertical-align: middle; 
+    margin-left: 10px; 
+}
+
+/* RESPONSIVE para Formación Académica */
+@media (max-width: 768px) {
+    .containerFormacion {
+        padding: 15px;
+    }
+
+    .textoConIcono {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .textoConIcono img {
+        max-width: 60px; 
+        margin-top: 10px; 
+    }
+
+    .tituloPrincipal {
+        font-size: 0.9rem !important; 
+        text-align: center; 
+    }
+
+    .tituloPrincipal img {
+        max-width: 40px; 
+        height: auto; 
+        margin-left: 5px; 
+    }
+}
+
+/* ESTILOS página REFERENCIAS */
+/* Configuración general */
+.containerExperiencia {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Sección Experiencia */
+.contenidoExperiencia {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.textoConIcono {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-align: justify;
+}
+
+.textoConIcono img {
+    width: 100px;
+    height: auto;
+}
+
+/* Sección Referencias */
+.referencias {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: formulario e imagen */
+    gap: 10px;
+    align-items: center;
+}
+
+.referencias form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.imagenScroll {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 400px; /* Altura fija para el contenedor */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    border: 4px solid #e46fb9; /* Contorno rosado */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    padding: 10px; /* Espaciado interno para que la imagen no toque el borde */
+    box-sizing: border-box; /* Incluye el padding dentro del ancho/alto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente opcional */
+}
+
+.referencias .imagenScroll img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    height: auto; /* Mantén la proporción */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+.referencias .imagenScroll img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    height: auto; /* Mantén la proporción */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+}
+
+.referencias .textoReferencias {
+    grid-column: 1 / span 2; /* Ocupa ambas columnas en pantallas grandes */
+    text-align: left; /* Centra el texto horizontalmente */
+    margin-bottom: 10px; /* Espacio debajo del texto */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    line-height: 1; /* Mejora la legibilidad */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .referencias {
+        display: flex;
+        flex-direction: column; /* Coloca la imagen y el formulario en una columna */
+        gap: 20px; /* Espaciado entre elementos */
+    }
+
+    .imagenScroll {
+        order: 1; /* Asegura que la imagen esté antes del formulario */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height: 250px; /* Altura fija con scroll */
+        overflow-y: auto; /* Habilita el scroll vertical */
+        border: 4px solid #e46fb9; /* Mantén el borde rosado */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        padding: 10px; /* Espaciado interno */
+        box-sizing: border-box; /* Incluye el padding dentro del ancho/alto */
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente opcional */
+    }
+
+    .imagenScroll img {
+        width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+        height: auto; /* Mantén la proporción */
+        object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    }
+
+    form.contactame {
+        order: 2; /* Mueve el formulario debajo de la imagen */
+    }
+
+}
+
+/*RESPONSIVE para Experiencia y Contacto */
+@media (min-width: 1200px) {
+    /* Estilos solo para la página Experiencia */
+    #main.containerExperiencia {
+        margin-top: 120px; /* Espacio adicional si el header es más grande */
+        margin-bottom: 70px; /* Espacio adicional para el footer */
+    }
+
+    /* Estilos solo para la página Contacto */
+    #main.containerContacto {
+        margin-top: 120px; /* Espacio adicional si el header es más grande */
+        margin-bottom: 70px; /* Espacio adicional para el footer */
+    }
+
+    /* Estilo para las referencias dentro de estas páginas */
+    #main.containerExperiencia .referencias,
+    #main.containerContacto .referencias {
+        padding: 20px; /* Asegura que el contenido no esté pegado a los bordes */
+    }
+}
+
+
 /* class sobre títulos principales */
 .tituloPrincipal {
     font-size: 3em;
     color: #e46fb9;
     margin-bottom: 20px;
     font-weight: bold;
-
 }
 
 /* class sobre títulos secundarios */
@@ -941,6 +1149,7 @@ article p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/*ESTILOS sobre CONTACTO */
 /* class Estilo para la imagen en containerContacto */
 body.bodyContacto {
     margin: 0; 
@@ -1016,6 +1225,64 @@ fieldset.contactame input[type="reset"] {
 fieldset.contactame input[type="submit"]:hover,
 fieldset.contactame input[type="reset"]:hover {
     background-color: #d836a5; 
+}
+
+@media (max-width: 768px) {
+    .containerContacto {
+        display: flex;
+        flex-direction: column; /* Apilamos los elementos verticalmente */
+        align-items: center; /* Centramos los elementos */
+        gap: 20px; /* Espaciado uniforme entre todos los elementos */
+    }
+
+    .containerContacto section img {
+        margin-bottom: 20px; /* Espacio específico entre la imagen y el siguiente elemento */
+    }
+
+    fieldset.contactame {
+        margin-top: 20px; /* Espacio adicional para separar el formulario de la imagen */
+    }
+}
+
+/* Para pantallas grandes (≥1200px) */
+@media (min-width: 1200px) {
+    /* Contenedor principal */
+    .containerContacto {
+        display: flex;
+        flex-direction: column; /* Apila las secciones verticalmente */
+        gap: 30px; /* Espaciado entre las secciones */
+        align-items: center; /* Centra las secciones */
+    }
+
+    /* Sección del formulario */
+    .formularioMapa {
+        max-width: 600px; /* Limita el ancho del formulario */
+        width: 100%; /* Asegura que sea responsivo */
+        margin: 0 auto; /* Centra la sección del formulario */
+    }
+
+    fieldset.contactame {
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    }
+
+    /* Sección del mapa */
+    .ubicacion {
+        max-width: 600px; /* Limita el ancho del mapa */
+        width: 100%; /* Asegura que sea responsivo */
+        text-align: center; /* Centra el título dentro de la sección */
+    }
+
+    .ubicacion iframe {
+        max-width: 100%; /* El mapa ocupa todo el ancho de la sección */
+        height: 300px; /* Altura fija del mapa */
+        border-radius: 10px; /* Bordes redondeados */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para el mapa */
+    }
+
+    .ubicacion h1 {
+        margin-bottom: 10px; /* Espacio entre el título y el mapa */
+        font-size: 1.8rem; /* Ajusta el tamaño del texto */
+    }
 }
 
 /* ESTILOS sobre FOOTER */

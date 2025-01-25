@@ -1,0 +1,238 @@
+/* ESTILOS SOBRE MI */
+.containerSobreMi {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Columna izquierda: Texto */
+.mainContainerSobreMi {
+    flex: 1; 
+    padding: 10px;
+}
+
+/* configuracion columna derecha: imágenes */
+.asidePerfil {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding-top: 20px; 
+    padding-right: 10px;
+    max-height: calc(100vh - 65px) !important; 
+}
+
+/* Configuración de las imágenes */
+.asidePerfil img {
+    max-width: 120px;
+    height: auto;
+    padding-top: 10px; 
+    padding-right: 10px;
+}
+
+.tituloCP {
+    border-radius: 15px; 
+    max-width: 155px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    box-shadow: none; 
+    object-fit: cover;
+}
+
+.mainContainerSobreMi .tituloPrincipal {
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+.typing {
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+.mainContainerSobreMi article p {
+    padding-left: 20px;
+}
+
+/* class sobre títulos terciarios con tipeo SOBRE MI */
+h3.typing {
+    font-size: 1.2em;
+    color: #e46fb9;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+h3.typing .text {
+    display: inline-block;
+    white-space: nowrap; 
+    overflow: hidden;
+    width: 0;
+    animation: typingNew 4s steps(39, end) forwards; 
+}
+
+h3.typing .cursor {
+    border-right: 2px solid #e46fb9; 
+    width: 1px;
+    height: 1em;
+    animation: blinkNew 0.5s step-end infinite; 
+}
+
+/* Nueva animación de tipeo */
+@keyframes typingNew {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Nueva animación del cursor */
+@keyframes blinkNew {
+    from,
+    to {
+        border-color: transparent; /* cursor invisible */
+    }
+    50% {
+        border-color: #e46fb9; /* cursor visible */
+    }
+}
+
+/* RESPONSIVE SOBRE MI */
+@media (max-width: 768px) {
+    .containerSobreMi {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 15px;
+        padding: 10px; 
+        min-height: auto !important; 
+    }
+
+    .mainContainerSobreMi {
+        flex: none; 
+        padding: 10px 15px; 
+        text-align: justify; 
+        width: 100%; 
+        font-size: 1em !important;
+
+    }
+
+    .asidePerfil {
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 10px; 
+        padding: 10px 0; 
+        
+    }
+
+    .asidePerfil img {
+        max-width: 90px; 
+        height: auto; 
+        margin: 0 auto; 
+    }
+
+    .tituloCP {
+        max-width: 80px; 
+        height: auto; 
+    }
+
+    .mainContainerSobreMi p {
+        font-size: 0.9em; 
+        line-height: 1.5; 
+        padding-left: 0 !important;
+    }
+
+    .mainContainerSobreMi .tituloPrincipal {
+        font-size: 1.5rem;
+        padding-left: 0px;
+    }
+
+    .mainContainerSobreMi .typing {
+        padding-left: 0px;
+        text-align: left; 
+        margin: 0 auto; 
+        width: fit-content; 
+        display: inline-block; 
+    }
+
+    h3.typing {
+        font-size: 1em; 
+        text-align: center; 
+        white-space: nowrap; 
+    }
+
+    h3.typing .text {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        width: auto; 
+        animation: typingNew 4s steps(39, end) forwards; 
+    }
+
+    h3.typing .cursor {
+        border-right: 2px solid #e46fb9; 
+        width: 1px;
+        height: 1em;
+        animation: blinkNew 0.5s step-end infinite; 
+    }
+
+    /* Footer */
+    footer {
+        margin-top: auto; 
+    }
+}
+
+/* Nueva animación de tipeo ajustada para responsive */
+@keyframes typingResponsive {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%; /* Asegura que termine justo al final del texto */
+    }
+}
+
+/* Responsive para pantallas grandes */
+@media (min-width: 1200px) {
+    .body .asidePerfil {
+        flex: 1; /* Ajusta el tamaño del contenedor de imágenes */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Para sobre-mi.html */
+    .bootstrapActive #main {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 15px;
+        height: calc(100vh - 130px); 
+    }
+
+    .bootstrapActive .mainContainerSobreMi {
+        flex: 4; 
+        max-width: 100%; 
+    }
+
+    .bootstrapActive .asidePerfil {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bootstrapActive .asidePerfil img {
+        max-width: 240px; 
+        margin-bottom: 20px; 
+    }
+}

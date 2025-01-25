@@ -1,0 +1,49 @@
+/* configuración del main.container */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 130px);
+    padding: 10px !important;
+    box-sizing: border-box;
+    gap: 10px;
+    overflow: hidden;
+}
+
+/* configuración del texto */
+.mainContainer {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+/* configuración del aside */
+.asideContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* configuración de la imagen dentro del aside */
+.asideContainer img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: cover;
+    display: block;
+}
+
+article p {
+    font-size: 1.2em !important; 
+    line-height: 1.5 !important; 
+    text-align: justify !important; 
+    margin-bottom: 10px !important; 
+    margin-top: 10px !important;
+    padding-left: 0px;
+    padding-right: 0px; 
+}

@@ -1,0 +1,164 @@
+/* ESTILOS INDEX */
+/* class para el título principal con tipeo en INDEX*/
+.tituloPrincipaltypewriter {
+    font-size: 3em;
+    color: #e46fb9;
+    white-space: nowrap; 
+    display: inline-flex; 
+    align-items: center;
+    font-weight: bold;
+}
+
+.tituloPrincipaltypewriter .text {
+    display: inline-block; 
+    animation: typing 3s steps(13, end); 
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+
+.tituloPrincipaltypewriter .cursor {
+    border-right: 2px solid #e46fb9; 
+    width: 1px; 
+    height: 1em; 
+    animation: blink 0.5s step-end infinite; 
+    margin-left: 10px; 
+    margin-right: 15px; 
+}
+
+.botonSonido {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+.botonSonido img {
+    width: 35px; 
+    height: 35px;
+    vertical-align: middle; 
+}
+
+/* animación del tipeo */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: calc(13ch - 1ch);
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #e46fb9;
+    }
+}
+
+/* RESPONSIVE INDEX */
+/* Responsive pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Contenedor principal */
+    .container {
+        display: flex !important; 
+        flex-direction: column !important; 
+        align-items: center !important; 
+        justify-content: space-around; 
+        gap: 10px !important; 
+        padding: 20px !important; 
+        min-height: 100vh !important; 
+        box-sizing: border-box; 
+    }
+
+    /* Título principal */
+    .tituloPrincipaltypewriter {
+        font-size: 25px !important; 
+        text-align: center !important;
+        margin-bottom: 10px !important; 
+    }
+
+    /* Botón de sonido */
+    .botonSonido img {
+        width: 20px !important; 
+        height: 20px !important;
+    }
+
+    /* Contenedor del texto */
+    article {
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        text-align: justify !important;
+    }
+
+    /* Párrafos del artículo */
+    article p {
+        font-size: 0.7em !important; 
+        line-height: 1.5 !important; 
+        margin-bottom: 10px !important; 
+        margin-top: 10px !important;
+    }
+
+    /* Imagen */
+    .asideContainer img {
+        margin-bottom: 5px !important; 
+        max-width: 50% !important; 
+        height: auto !important; 
+        margin-top: auto; 
+        margin-bottom: auto; 
+    }
+
+    /* Footer */
+    #footer {
+        margin-top: auto; 
+    }
+}
+
+/* Media Query para pantallas intermedias */
+@media (min-width: 768px) and (max-width: 992px) {
+    .container {
+        flex-direction: column !important; 
+        align-items: center !important; 
+        gap: 5px !important; 
+        padding: 0 10px !important; 
+        min-height: 100vh !important; 
+        display: flex !important; 
+        justify-content: center;  
+    }
+
+    /* Título principal */
+    .tituloPrincipaltypewriter {
+        font-size: 1rem !important; 
+        text-align: center !important;
+        padding-left: 20px;
+        padding-right: 20px; 
+    }
+
+    /* Botón de sonido */
+    .botonSonido img {
+        width: 25px !important; 
+        height: 25px !important;
+    }
+
+    /* Aside para la imagen */
+    .asideContainer img {
+        margin-bottom: 5px !important; 
+        max-width: 35% !important; 
+        height: auto !important; 
+        margin-top: 2em !important; 
+    }
+
+    article p {
+        font-size: 0.9em !important; 
+        line-height: 1 !important; 
+        text-align: justify !important; 
+        margin-bottom: 20px !important; 
+        margin-top: 10px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important; 
+    } 
+}

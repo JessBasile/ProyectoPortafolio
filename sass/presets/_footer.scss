@@ -1,0 +1,40 @@
+/* ESTILOS FOOTER */
+#footer {
+    width: 100%;
+    height: 65px; /* igual altura que el header */
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    /* text-align opcional; si quieres centrar el texto dentro de su contenedor */
+  }
+  
+  /* Contenedor del texto */
+  #footer .textFooter {
+    display: flex; 
+    align-items: center;
+    margin-right: 2rem; 
+  }
+  #footer .textFooter p {
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Contenedor de iconos */
+  #footer .iconosFooter {
+    display: flex;
+    align-items: center;
+    gap: 1rem;   
+  }
+  
+  /* Tamaño y hover de iconos */
+  #footer .iconosFooter img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  #footer .iconosFooter img:hover {
+    transform: scale(1.2);
+  }

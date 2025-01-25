@@ -1,0 +1,58 @@
+/* ESTILOS SOBRE HEADER */
+/* id header distribucción y color */
+#header {
+    height: 65px; /* altura fija igual que footer */
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* logo a la izquierda, menú a la derecha */
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.774); /* azul translúcido */
+    position: relative;
+    top: 0; /* Anclado al borde superior */
+    left: 0;
+    z-index: 10;
+}
+
+/* class del logo de la página en header */
+#header .logo {
+    max-height: 60px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+}
+
+/* id navBar horizontal */
+#navBar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+/* id navBar estilo de los hipervínculos */
+#navBar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* id navBar estilos de movimientos mouse */
+#navBar ul li a:hover {
+    color: #de46a6;
+    background-color: rgba(255, 255, 255, 0.2); 
+}
+
+/* id navBar estilos sobre "active" en hipervínculos */
+#navBar ul li a.active {
+    color: #de46a6;
+    background: none; 
+}

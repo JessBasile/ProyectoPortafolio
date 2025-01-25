@@ -9,32 +9,34 @@
     justify-content: center;
     flex-wrap: nowrap;
     /* text-align opcional; si quieres centrar el texto dentro de su contenedor */
-  }
   
-  /* Contenedor del texto */
-  #footer .textFooter {
-    display: flex; 
-    align-items: center;
-    margin-right: 2rem; 
-  }
-  #footer .textFooter p {
-    margin: 0;
-    text-align: center;
-  }
+    /* Contenedor del texto */
+    .textFooter {
+      display: flex; 
+      align-items: center;
+      margin-right: 2rem; 
+
+      p {
+      margin: 0;
+      text-align: center;
+      }
+    }
   
   /* Contenedor de iconos */
-  #footer .iconosFooter {
+  .iconosFooter {
     display: flex;
     align-items: center;
-    gap: 1rem;   
-  }
+    gap: 1rem;
   
-  /* Tamaño y hover de iconos */
-  #footer .iconosFooter img {
-    width: 30px;
-    height: auto;
-    transition: transform 0.3s ease;
+    /* Tamaño y hover de iconos */
+    img {
+      width: 30px;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
   }
-  #footer .iconosFooter img:hover {
-    transform: scale(1.2);
-  }
+}

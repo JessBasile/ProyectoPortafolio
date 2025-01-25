@@ -9,33 +9,35 @@
     gap: 15px; 
     line-height: 1.5; 
     text-align: justify;
+
+    /* Asegura que el ícono se posicione en el centro */
+    .icono {
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+
+        /* Estilo del ícono */
+        img {
+            width: 100px; 
+            height: 100px; 
+            cursor: pointer; 
+            transition: transform 0.3s ease;
+
+            /* Efecto hover en el ícono */
+            &:hover {
+                transform: scale(1.3);
+            }
+        }
+    }
 }
 
-/* Estilo del ícono */
-.textoConIcono .icono img {
-    width: 100px; 
-    height: 100px; 
-    cursor: pointer; 
-    transition: transform 0.3s ease; 
-}
-
-/* Asegura que el ícono se posicione en el centro */
-.textoConIcono .icono {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-/* Efecto hover en el ícono */
-.textoConIcono .icono img:hover {
-    transform: scale(1.3); 
-}
-
-.tituloPrincipal img {
-    max-width: 60px; 
-    height: auto; 
-    vertical-align: middle; 
-    margin-left: 10px; 
+.tituloPrincipal {
+    img {
+        max-width: 60px; 
+        height: auto; 
+        vertical-align: middle; 
+        margin-left: 10px; 
+    }
 }
 
 /* RESPONSIVE FORMACIÓN ACADÉMICA */
@@ -47,21 +49,21 @@
     .textoConIcono {
         flex-direction: column; 
         align-items: center;
-    }
 
-    .textoConIcono img {
-        max-width: 60px; 
-        margin-top: 10px; 
+        img {
+            max-width: 60px; 
+            margin-top: 10px;
+        } 
     }
 
     .tituloPrincipal {
         font-size: 0.9rem !important; 
-        text-align: center; 
-    }
+        text-align: center;
 
-    .tituloPrincipal img {
-        max-width: 40px; 
-        height: auto; 
-        margin-left: 5px; 
+        img {
+            max-width: 40px; 
+            height: auto; 
+            margin-left: 5px; 
+        }
     }
 }

@@ -33,44 +33,38 @@
     grid-template-columns: 1fr 1fr; /* Dos columnas: formulario e imagen */
     gap: 10px;
     align-items: center;
-}
 
-.referencias form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 
-.imagenScroll {
-    width: 100%; 
-    height: 400px;
-    overflow-y: auto;
-    border: 4px solid #e46fb9; 
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    padding: 10px; 
-    box-sizing: border-box; 
-    background-color: rgba(0, 0, 0, 0.5);
-}
+    .imagenScroll {
+        width: 100%; 
+        height: 400px;
+        overflow-y: auto;
+        border: 4px solid #e46fb9; 
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        padding: 10px; 
+        box-sizing: border-box; 
+        background-color: rgba(0, 0, 0, 0.5);
 
-.referencias .imagenScroll img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover; 
-}
+        img {
+            width: 100%; 
+            height: auto; 
+            object-fit: cover; 
+        }
+    }
 
-.referencias .imagenScroll img {
-    width: 100%; 
-    height: auto; 
-    object-fit: cover;
-}
-
-.referencias .textoReferencias {
-    grid-column: 1 / span 2; 
-    text-align: left; 
-    margin-bottom: 10px; 
-    font-size: 14px; 
-    line-height: 1;
+    .textoReferencias {
+        grid-column: 1 / span 2; 
+        text-align: left; 
+        margin-bottom: 10px; 
+        font-size: 14px; 
+        line-height: 1;
+    }
 }
 
 /* RESPONSIVE EXPERIENCIA */
@@ -79,51 +73,45 @@
     .referencias {
         display: flex;
         flex-direction: column; 
-        gap: 20px; 
-    }
+        gap: 20px;
 
-    .imagenScroll {
-        order: 1; 
-        width: 100%; 
-        height: 250px; 
-        overflow-y: auto; 
-        border: 4px solid #e46fb9; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-        padding: 10px; 
-        box-sizing: border-box; 
-        background-color: rgba(0, 0, 0, 0.5); 
-    }
+        .imagenScroll {
+            order: 1; 
+            width: 100%; 
+            height: 250px; 
+            overflow-y: auto; 
+            border: 4px solid #e46fb9; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+            padding: 10px; 
+            box-sizing: border-box; 
+            background-color: rgba(0, 0, 0, 0.5); 
 
-    .imagenScroll img {
-        width: 100%; 
-        height: auto; 
-        object-fit: cover;
-    }
+            img {
+                width: 100%; 
+                height: auto; 
+                object-fit: cover;
+            }
+        }
 
-    form.contactame {
+        form.contactame {
         order: 2;
-    }
+        }
 
+    }
 }
 
 /*RESPONSIVE EXPERIENCIA & CONTACTO */
 @media (min-width: 1200px) {
     /* Estilos solo para la página Experiencia */
-    #main.containerExperiencia {
+    #main.containerExperiencia,
+    #main.containerContacto {
         margin-top: 120px; 
         margin-bottom: 70px;
     }
 
-    /* Estilos solo para la página Contacto */
-    #main.containerContacto {
-        margin-top: 120px; 
-        margin-bottom: 70px; 
-    }
-
     /* Estilo para las referencias dentro de estas páginas */
-    #main.containerExperiencia .referencias,
-    #main.containerContacto .referencias {
+    .referencias {
         padding: 20px;
     }
 }
@@ -143,13 +131,12 @@ article p {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-}
 
-/* selector de la imagen del aside de aplicación global */
-.asideContainer img {
-    max-width: 80%;
-    height: auto; 
-    border-radius: 10px;
-    display: block; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+     img {
+        max-width: 80%;
+        height: auto; 
+        border-radius: 10px;
+        display: block; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
 }

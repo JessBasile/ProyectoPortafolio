@@ -10,34 +10,35 @@
     box-sizing: border-box;
     gap: 10px;
     overflow: hidden;
+
+    /* configuración del texto */
+    .mainContainer {
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    /* configuración del aside */
+    .asideContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        /* configuración de la imagen dentro del aside */
+        img {
+            width: 100%;
+            height: auto;
+            max-width: none;
+            max-height: none;
+            object-fit: cover;
+            display: block;
+        }
+    }
 }
 
-/* configuración del texto */
-.mainContainer {
-    box-sizing: border-box;
-    overflow: hidden;
-    width: 100%; /* Ocupa todo el ancho */
-}
-
-/* configuración del aside */
-.asideContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-/* configuración de la imagen dentro del aside */
-.asideContainer img {
-    width: 100%;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    object-fit: cover;
-    display: block;
-}
-
+/* Configuración del texto en article */
 article p {
     font-size: 1.2em !important; 
     line-height: 1.5 !important; 

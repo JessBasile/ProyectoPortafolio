@@ -8,19 +8,23 @@ body.bodyContacto {
 
 .containerContacto {
     padding: 0 15px; /* Aplica los márgenes como padding aquí */
-}
 
-.containerContacto section img {
-    float: right;
-    max-width: 230px;
-    height: auto;
-    margin-left: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
+    section { 
+        img {
+            float: right;
+            max-width: 230px;
+            height: auto;
+            margin-left: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+    }
 
-.ubicacion iframe {
-    border-radius: 15px; /* Bordes redondeados */
+    .ubicacion { 
+        iframe {
+            border-radius: 15px; /* Bordes redondeados */
+        }
+    }
 }
 
 /* selector sobre ubicación de Contacto */
@@ -30,54 +34,53 @@ fieldset.contactame {
     background-color: rgba(228, 111, 185, 0.1);
     padding: 20px;
     margin: 20px 0;
-    color: white; 
-}
-
-/* selector de color texto cuadrado */
-fieldset.contactame legend {
-    color: #e46fb9;
-    font-weight: bold;
-    font-size: 1.5em; 
-}
-
-/* selector de organización del formulario */
-fieldset.contactame label {
-    display: block;
-    margin-bottom: 10px;
-    color: white; 
-}
-
-/* selector sobre formato del formulario */
-fieldset.contactame input, 
-fieldset.contactame textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #e46fb9;
-    border-radius: 5px; 
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: white; 
-    font-size: 1em;
-}
-
-/* selector formato de las teclas del formulario */
-fieldset.contactame input[type="submit"],
-fieldset.contactame input[type="reset"] {
-    width: auto; 
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: #e46fb9;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-/* selector color botones formulario al pasar mouse */
-fieldset.contactame input[type="submit"]:hover,
-fieldset.contactame input[type="reset"]:hover {
-    background-color: #d836a5; 
+    /* selector de color texto cuadrado */
+    legend {
+        color: #e46fb9;
+        font-weight: bold;
+        font-size: 1.5em; 
+    }
+
+    /* selector de organización del formulario */
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: white; 
+    }
+
+    /* selector sobre formato del formulario */
+    input, 
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #e46fb9;
+        border-radius: 5px; 
+        background-color: rgba(255, 255, 255, 0.2); 
+        color: white; 
+        font-size: 1em;
+    }
+
+    /* selector formato de las teclas del formulario */
+    input[type="submit"],
+    input[type="reset"] {
+        width: auto; 
+        padding: 10px 20px;
+        margin-right: 10px;
+        background-color: #e46fb9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        /* selector color botones formulario al pasar mouse */
+        &:hover {
+            background-color: #d836a5; 
+        }
+    }
 }
 
 /* RESPONSIVE CONTACTO */
@@ -87,15 +90,17 @@ fieldset.contactame input[type="reset"]:hover {
         flex-direction: column; 
         align-items: center;
         gap: 20px;
-    }
 
-    .containerContacto section img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        max-width: 100%; /* Asegura que la imagen sea responsiva */
-        height: auto;
+        section {
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 20px;
+                max-width: 100%; /* Asegura que la imagen sea responsiva */
+                height: auto;
+            }
+        }
     }
 
     fieldset.contactame {
@@ -129,17 +134,17 @@ fieldset.contactame input[type="reset"]:hover {
         max-width: 600px;
         width: 100%; 
         text-align: center;
-    }
 
-    .ubicacion iframe {
-        max-width: 100%; 
-        height: 300px; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-    }
+        iframe {
+            max-width: 100%; 
+            height: 300px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+        }
 
-    .ubicacion h1 {
-        margin-bottom: 10px; 
-        font-size: 1.8rem; 
+        h1 {
+            margin-bottom: 10px; 
+            font-size: 1.8rem; 
+        }
     }
 }

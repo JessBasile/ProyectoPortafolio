@@ -1,0 +1,27 @@
+/* ANIMACIONES ADICIONALES */
+/* En gral las animaciones se hicieron en cada scss, estas son adicionales */
+
+/* Gradient para los formularios */
+fieldset.contactame {
+    background: linear-gradient(to bottom,
+        rgba(224, 118, 230, 0.531),
+        rgba(74, 9, 71, 0.325)          
+    );
+}
+
+/* Rotate y keyframes para imagen Perfil */
+.asidePerfil img[alt="Perfil Jess"]:hover {
+    animation: swinPerfil 2s ease-in-out infinite alternate;
+}
+
+@keyframes swinPerfil {
+    0% {
+        transform: rotate(0deg); /* Posición inicial */
+    }
+    50% {
+        transform: rotate(10deg); /* Gira hacia un lado */
+    }
+    100% {
+        transform: rotate(-10deg); /* Gira hacia el otro lado */
+    }
+}

@@ -41,7 +41,7 @@ fieldset.contactame {
 
     /* selector de color texto cuadrado */
     legend {
-        color: vars.$color-primario;
+        color: vars.$color-escritura;
         font-weight: bold;
         font-size: 1.5em; 
     }
@@ -64,6 +64,13 @@ fieldset.contactame {
         background-color: vars.$color-seleccion; 
         color: vars.$color-escritura; 
         font-size: 1em;
+
+        /* Estilo para el placeholder */
+        &::placeholder {
+            color: rgb(227, 148, 243); /* Blanco */
+            opacity: 0.9; /* Opcional */
+            font-style: italic;
+        }
     }
 
     /* selector formato de las teclas del formulario */

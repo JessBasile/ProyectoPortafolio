@@ -1,3 +1,6 @@
+/* IMPLEMENTACIÓN DE VARIABLES */
+@use "../variables/variables" as vars;
+
 /* ESTILOS PROYECTOS con GRID */
 /* Caracteristicas de la página de Proyectos */
 .containerProyectos {
@@ -13,33 +16,12 @@
     /* Título principal */
     .tituloPrincipalProyectos {
         font-size: 2rem;
-        font-family: Arial, sans-serif; 
-        color: #e46fb9;
+        font-family: vars.$tipo-letra; 
+        color: vars.$color-primario;
         text-align: center;
         margin-bottom: 20px;
         max-width: 1200px; /* Limita el ancho del título en pantallas grandes */
         font-weight: bold;
-    }
-
-    /* Grilla de proyectos */
-    .gridProyectos {
-        display: grid;
-        grid-template-areas:
-            "analytics sql mongodb"
-            "python engineer docencia";
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 20px; 
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-
-        /* Asignación de áreas */
-        .analytics { grid-area: analytics; }
-        .sql { grid-area: sql; }
-        .mongodb { grid-area: mongodb; }
-        .python { grid-area: python; }
-        .engineer { grid-area: engineer; }
-        .docencia { grid-area: docencia; }
     }
 
     /* Cajas de cada proyecto */
@@ -64,7 +46,7 @@
             object-fit: cover;
             border-radius: 10px;
         }
-
+        
         /* Características del texto y la flecha */
         .info {
             display: flex;
@@ -72,17 +54,17 @@
             align-items: center;
             gap: 10px;
             margin-top: 10px;
-
+        
             /* Estilo para el texto de proyectos */
             p {
-                font-family: Arial, sans-serif;
+                font-family: vars.$tipo-letra;
                 font-size: 1rem; 
                 font-weight: bold; 
                 color: black;
                 margin: 0; 
                 text-align: center;
             }
-
+        
             /* Estilo para el ícono de la flecha */
             .flecha {
                 width: 20px; 
@@ -92,7 +74,7 @@
                 padding: 0; 
                 object-fit: cover; 
                 transition: transform 0.3s ease; 
-
+        
                 /* Efecto hover para agrandar el ícono */
                 &:hover {
                     transform: scale(1.2);
@@ -109,6 +91,44 @@
         max-width: 1200px; 
         margin: 0 auto; 
     }
+}
+        
+/* Grilla de proyectos */
+.gridProyectos {
+    display: grid;
+    grid-template-areas:
+        "analytics sql mongodb"
+        "python engineer docencia";
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Asignación de áreas */
+.analytics {
+    grid-area: analytics;
+}
+
+.sql {
+    grid-area: sql;
+}
+
+.mongodb {
+    grid-area: mongodb;
+}
+
+.python {
+    grid-area: python;
+}
+
+.engineer {
+    grid-area: engineer;
+}
+
+.docencia {
+    grid-area: docencia;
 }
 
 /* RESPONSIVE en grilla PROYECTOS */

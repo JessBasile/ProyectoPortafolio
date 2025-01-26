@@ -1,8 +1,11 @@
+/* IMPLEMENTACIÓN DE VARIABLES */
+@use "../variables/variables" as vars;
+
 /* ESTILOS FORMACIÓN ACADÉMICA */
 /* Contenedor del texto e ícono */
 .textoConIcono {
-    font-family: Arial, sans-serif;
-    color: white;
+    font-family: vars.$tipo-letra;
+    color: vars.$color-escritura;
     font-size: 14px;
     display: flex; 
     align-items: center; 

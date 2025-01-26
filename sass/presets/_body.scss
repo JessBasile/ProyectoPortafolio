@@ -1,7 +1,10 @@
+/* IMPLEMENTACIÓN DE VARIABLES */
+@use "../variables/variables" as vars;
+
 /* ESTILOS SOBRE BODY */
 /* id body estilo letras */
 #body {
-    font-family: Arial, sans-serif;
+    font-family: vars.$tipo-letra;
     font-size: 12px;
     height: 100vh;
     display: grid;

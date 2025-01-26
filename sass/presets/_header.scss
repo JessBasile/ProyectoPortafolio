@@ -1,3 +1,6 @@
+/* IMPLEMENTACIÓN DE VARIABLES */
+@use "../variables/variables" as vars;
+
 /* ESTILOS SOBRE HEADER */
 /* id header distribucción y color */
 #header {
@@ -36,7 +39,7 @@
             /* id navBar estilo de los hipervínculos */
             li {
                 a {
-                    color: white;
+                    color: vars.$color-escritura;
                     text-decoration: none;
                     font-size: 14px;
                     font-weight: bold;
@@ -46,13 +49,13 @@
 
                     /* id navBar estilos de movimientos mouse */
                     &:hover {
-                        color: #de46a6;
-                        background-color: rgba(255, 255, 255, 0.2); 
+                        color: vars.$color-destacado;
+                        background-color: vars.$color-seleccion; 
                     }
 
                     /* id navBar estilos sobre "active" en hipervínculos */
                     &.active {
-                        color: #de46a6;
+                        color: vars.$color-destacado;
                         background: none; 
                     }
                 }

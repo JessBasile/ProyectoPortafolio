@@ -1,3 +1,6 @@
+/* IMPLEMENTACIÓN DE VARIABLES */
+@use "../variables/variables" as vars;
+
 /* ESTILOS SOBRE MI */
 .containerSobreMi {
     display: flex;
@@ -60,7 +63,7 @@
 /* class sobre títulos terciarios con tipeo SOBRE MI */
 h3.typing {
     font-size: 1.2em;
-    color: #e46fb9;
+    color: vars.$color-primario;
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
@@ -75,7 +78,7 @@ h3.typing {
     }
 
     .cursor {
-        border-right: 2px solid #e46fb9; 
+        border-right: 2px solid vars.$color-primario; 
         width: 1px;
         height: 1em;
         animation: blinkNew 0.5s step-end infinite; 
@@ -98,7 +101,7 @@ h3.typing {
         border-color: transparent; /* cursor invisible */
     }
     50% {
-        border-color: #e46fb9; /* cursor visible */
+        border-color: vars.$color-primario; /* cursor visible */
     }
 }
 
@@ -172,7 +175,7 @@ h3.typing {
         }
 
         .cursor {
-            border-right: 2px solid #e46fb9; 
+            border-right: 2px solid vars.$color-primario; 
             width: 1px;
             height: 1em;
             animation: blinkNew 0.5s step-end infinite; 

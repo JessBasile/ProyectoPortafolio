@@ -1,3 +1,6 @@
+/* IMPLEMENTACIÓN DE VARIABLES */
+@use "../variables/variables" as vars;
+
 /*ESTILOS CONTACTO */
 /* class Estilo para la imagen en containerContacto */
 body.bodyContacto {
@@ -29,16 +32,16 @@ body.bodyContacto {
 
 /* selector sobre ubicación de Contacto */
 fieldset.contactame {
-    border: 2px solid #e46fb9;
+    border: 2px solid vars.$color-primario;
     border-radius: 10px;
     background-color: rgba(228, 111, 185, 0.1);
     padding: 20px;
     margin: 20px 0;
-    color: white;
+    color: vars.$color-escritura;
 
     /* selector de color texto cuadrado */
     legend {
-        color: #e46fb9;
+        color: vars.$color-primario;
         font-weight: bold;
         font-size: 1.5em; 
     }
@@ -47,7 +50,7 @@ fieldset.contactame {
     label {
         display: block;
         margin-bottom: 10px;
-        color: white; 
+        color: vars.$color-escritura; 
     }
 
     /* selector sobre formato del formulario */
@@ -56,10 +59,10 @@ fieldset.contactame {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
-        border: 1px solid #e46fb9;
+        border: 1px solid vars.$color-primario;
         border-radius: 5px; 
-        background-color: rgba(255, 255, 255, 0.2); 
-        color: white; 
+        background-color: vars.$color-seleccion; 
+        color: vars.$color-escritura; 
         font-size: 1em;
     }
 
@@ -69,8 +72,8 @@ fieldset.contactame {
         width: auto; 
         padding: 10px 20px;
         margin-right: 10px;
-        background-color: #e46fb9;
-        color: white;
+        background-color: vars.$color-primario;
+        color: vars.$color-escritura;
         border: none;
         border-radius: 5px;
         cursor: pointer;

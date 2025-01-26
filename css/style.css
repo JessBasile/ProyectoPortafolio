@@ -1,4 +1,10 @@
 @charset "UTF-8";
+/* LLAMADO GLOBAL DE VARIABLES */
+/* Al utilizarse @use en lugar de @import, se llaman las variables en el style.scss y el cada page */
+/* @use "variables/variables" as vars; */
+/* PAGES SEGÚN ORDEN DE APARICIÓN DEL CSS ORIGINAL */
+/* IMPLEMENTACIÓN DE VARIABLES */
+/* DEFINICIÓN DE VARIABLES GLOBALES */
 /* Cambios globales */
 * {
   margin: 0;
@@ -21,6 +27,7 @@
   margin-bottom: 5px;
 }
 
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* ESTILOS SOBRE HEADER */
 /* id header distribucción y color */
 #header {
@@ -75,6 +82,7 @@
   background: none;
 }
 
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* NARVBAR CON BOOSTRAP */
 /* Configuración general del navbar */
 .bootstrapActive #header {
@@ -198,6 +206,7 @@
     z-index: 1030;
   }
 }
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* ESTILOS SOBRE BODY */
 /* id body estilo letras */
 #body {
@@ -259,6 +268,7 @@
 }
 
 /* Configuración del texto en article */
+/* Implementación de !imports por superposición de estilos c/bootstrap */
 article p {
   font-size: 1.2em !important;
   line-height: 1.5 !important;
@@ -269,6 +279,7 @@ article p {
   padding-right: 0px;
 }
 
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* ESTILOS INDEX */
 /* class para el título principal con tipeo en INDEX*/
 .tituloPrincipaltypewriter {
@@ -326,6 +337,7 @@ article p {
 }
 /* RESPONSIVE INDEX */
 /* Responsive pantallas pequeñas */
+/* Utilización de !imports por superposición de estilos con bootstrap */
 @media (max-width: 768px) {
   /* Contenedor principal */
   .container {
@@ -417,6 +429,12 @@ article p {
     padding-right: 20px !important;
   }
 }
+@media (min-width: 992px) {
+  .asideContainer img {
+    max-width: 80% !important; /* Ajusta el ancho máximo para pantallas grandes */
+  }
+}
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* ESTILOS SOBRE MI */
 .containerSobreMi {
   display: flex;
@@ -624,6 +642,7 @@ h3.typing .cursor {
     margin-bottom: 20px;
   }
 }
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* ESTILOS PÁGINA SKILLS con GRID*/
 .containerSkills {
   display: grid;
@@ -703,6 +722,7 @@ h3.typing .cursor {
     margin-bottom: 0px;
   }
 }
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* ESTILOS PROYECTOS con GRID */
 /* Caracteristicas de la página de Proyectos */
 .containerProyectos {
@@ -715,7 +735,6 @@ h3.typing .cursor {
   margin: 0 auto;
   box-sizing: border-box;
   /* Título principal */
-  /* Grilla de proyectos */
   /* Cajas de cada proyecto */
 }
 .containerProyectos .tituloPrincipalProyectos {
@@ -726,34 +745,6 @@ h3.typing .cursor {
   margin-bottom: 20px;
   max-width: 1200px; /* Limita el ancho del título en pantallas grandes */
   font-weight: bold;
-}
-.containerProyectos .gridProyectos {
-  display: grid;
-  grid-template-areas: "analytics sql mongodb" "python engineer docencia";
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  /* Asignación de áreas */
-}
-.containerProyectos .gridProyectos .analytics {
-  grid-area: analytics;
-}
-.containerProyectos .gridProyectos .sql {
-  grid-area: sql;
-}
-.containerProyectos .gridProyectos .mongodb {
-  grid-area: mongodb;
-}
-.containerProyectos .gridProyectos .python {
-  grid-area: python;
-}
-.containerProyectos .gridProyectos .engineer {
-  grid-area: engineer;
-}
-.containerProyectos .gridProyectos .docencia {
-  grid-area: docencia;
 }
 .containerProyectos .proyecto {
   display: flex;
@@ -816,6 +807,42 @@ h3.typing .cursor {
   margin: 0 auto;
 }
 
+/* Grilla de proyectos */
+.gridProyectos {
+  display: grid;
+  grid-template-areas: "analytics sql mongodb" "python engineer docencia";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Asignación de áreas */
+.analytics {
+  grid-area: analytics;
+}
+
+.sql {
+  grid-area: sql;
+}
+
+.mongodb {
+  grid-area: mongodb;
+}
+
+.python {
+  grid-area: python;
+}
+
+.engineer {
+  grid-area: engineer;
+}
+
+.docencia {
+  grid-area: docencia;
+}
+
 /* RESPONSIVE en grilla PROYECTOS */
 @media (max-width: 765px) {
   .gridProyectos {
@@ -823,6 +850,7 @@ h3.typing .cursor {
     grid-template-columns: 1fr 1fr;
   }
 }
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* ESTILOS FORMACIÓN ACADÉMICA */
 /* Contenedor del texto e ícono */
 .textoConIcono {
@@ -883,6 +911,7 @@ h3.typing .cursor {
     margin-left: 5px;
   }
 }
+/* IMPLEMENTACIÓN DE VARIABLES */
 /* ESTILOS EXPERIENCIA */
 /* Configuración general */
 .containerExperiencia {
@@ -1014,6 +1043,7 @@ article p {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* IMPLEMENTACIÓN DE VARIABLES */
 /*ESTILOS CONTACTO */
 /* class Estilo para la imagen en containerContacto */
 body.bodyContacto {
@@ -1154,7 +1184,7 @@ fieldset.contactame input[type=reset]:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  /* text-align opcional; si quieres centrar el texto dentro de su contenedor */
+  /* text-align opcional; si quiero centrar el texto dentro de su contenedor */
   /* Contenedor del texto */
   /* Contenedor de iconos */
 }

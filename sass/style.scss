@@ -1,6 +1,11 @@
+/* LLAMADO GLOBAL DE VARIABLES */
+/* Al utilizarse @use en lugar de @import, se llaman las variables en el style.scss y el cada page */
+/* @use "variables/variables" as vars; */
+
+/* PAGES SEGÚN ORDEN DE APARICIÓN DEL CSS ORIGINAL */
 @use "presets/reset";
 @use "presets/header";
-@use "presets/narvbarboostrap";
+@use "presets/narvbarbootstrap";
 @use "presets/body";
 @use "presets/main";
 @use "pages-sass/index";

@@ -1,3 +1,6 @@
+/* IMPLEMENTACIÓN DE VARIABLES */
+@use "../variables/variables" as vars;
+
 /* Cambios globales */
 * {
     margin: 0;
@@ -8,7 +11,7 @@
 /* class sobre títulos principales */
 .tituloPrincipal {
     font-size: 3em;
-    color: #e46fb9;
+    color: vars.$color-primario;
     margin-bottom: 20px;
     font-weight: bold;
 }
@@ -16,6 +19,6 @@
 /* class sobre títulos secundarios */
 .tituloSecundario {
     font-size: 2em;
-    color: #e46fb9; 
+    color: vars.$color-primario; 
     margin-bottom: 5px;
 }

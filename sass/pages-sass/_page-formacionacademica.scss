@@ -57,7 +57,7 @@
         margin-left: 0px !important; /* Menos margen en el lado izquierdo */
         margin-right: 0px !important; /* Menos margen en el lado derecho */
 
-        img {
+        > img {
             max-width: 60px; 
             margin-top: 10px;
         } 
@@ -73,9 +73,7 @@
             margin-left: 5px; 
         }
     }
-}
 
-@media (max-width: 768px) {
     section.mainContainerSobreMi {
     padding: 0 !important; /* Quita el espacio interno en móviles */
     }

@@ -112,7 +112,7 @@
     /* Imagen */
     .asideContainer img {
         margin-bottom: 5px !important; 
-        max-width: 30% !important; 
+        max-width: 50% !important; 
         height: auto !important; 
         margin-top: auto; 
         margin-bottom: auto; 
@@ -135,63 +135,69 @@
         display: flex !important; 
         justify-content: center;
         overflow-y: auto !important;  /* Habilita scroll vertical */
-        overflow-x: hidden !important; /* Oculta el scroll horizontal */   
-    }
-
-    /* Título principal */
-    .tituloPrincipaltypewriter {
-        font-size: 1rem !important; 
-        text-align: center !important;
-        padding-left: 20px;
-        padding-right: 20px; 
-    }
-
-    /* Botón de sonido */
-    .botonSonido img {
-        width: 25px !important; 
-        height: 25px !important;
-    }
-
-    /* Aside para la imagen */
-    .asideContainer img {
-        margin-bottom: 5px !important; 
-        max-width: 35% !important; 
-        height: auto !important; 
-        margin-top: 2em !important; 
-    }
-
-    article p {
-        font-size: 1rem !important; 
-        line-height: 1 !important; 
-        text-align: justify !important; 
-        margin-bottom: 20px !important; 
-        margin-top: 10px !important;
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        display: block !important; /* Por si accidentalmente tiene display: none */ 
-    }
-
-    section.mainContainer {
-        overflow-y: auto !important;  /* Habilita scroll vertical */
         overflow-x: hidden !important; /* Oculta el scroll horizontal */
+
+        /* Título principal */
+        .tituloPrincipaltypewriter {
+            font-size: 1rem !important; 
+            text-align: center !important;
+            padding-left: 20px;
+            padding-right: 20px; 
+        }
+
+        /* Botón de sonido */
+        .botonSonido {
+            img {
+                width: 25px !important; 
+                height: 25px !important;
+            }
+        }
+
+        /* Aside para la imagen */
+        .asideContainer { 
+            img {
+                margin-bottom: 5px !important; 
+                max-width: 35% !important; 
+                height: auto !important; 
+                margin-top: 2em !important; 
+            }
+        }
+
+        article { 
+            p {
+                font-size: 1rem !important; 
+                line-height: 1 !important; 
+                text-align: justify !important; 
+                margin-bottom: 20px !important; 
+                margin-top: 10px !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+                display: block !important; /* Por si accidentalmente tiene display: none */ 
+            }
+        }
+
+        section.mainContainer {
+            overflow-y: auto !important;  /* Habilita scroll vertical */
+            overflow-x: hidden !important; /* Oculta el scroll horizontal */
+        }
+
+        #main.container {
+            font-size: 13px !important; /* Ajuste solo para Contacto */
+            line-height: 1.5 !important;
+        }
     }
-}
+} 
 
 @media (min-width: 992px) {
-    .asideContainer img {
-        max-width: 80% !important; /* Ajusta el ancho máximo para pantallas grandes */
+    .asideContainer { 
+        img {
+            max-width: 80% !important; /* Ajusta el ancho máximo para pantallas grandes */
+        }
     }
 
     #main.container > section.mainContainer > article {
         max-height: none !important; /* Quita cualquier restricción de altura */
         overflow: visible !important; /* Asegura que el contenido no sea cortado */
-        display: block !important; /* Por si accidentalmente tiene display: none */
-    }
-}
-
-@media (max-width: 768px) and (max-width: 992px) {
-    #main.container {
-        font-size: 13px !important; /* Ajuste solo para Contacto */
-        line-height: 1.5 !important;
+        display: block !important;
     }
 }

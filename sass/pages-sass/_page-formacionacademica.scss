@@ -13,6 +13,7 @@
     line-height: 1.5; 
     text-align: justify;
     margin: 0 20px; /* Margen lateral para evitar desbordamiento */
+    margin-bottom: 20px !important;
 
     /* Asegura que el ícono se posicione en el centro */
     .icono {
@@ -53,6 +54,8 @@
     .textoConIcono {
         flex-direction: column; 
         align-items: center;
+        margin-left: 0px !important; /* Menos margen en el lado izquierdo */
+        margin-right: 0px !important; /* Menos margen en el lado derecho */
 
         img {
             max-width: 60px; 
@@ -69,5 +72,11 @@
             height: auto; 
             margin-left: 5px; 
         }
+    }
+}
+
+@media (max-width: 768px) {
+    section.mainContainerSobreMi {
+    padding: 0 !important; /* Quita el espacio interno en móviles */
     }
 }

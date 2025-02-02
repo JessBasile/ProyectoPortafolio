@@ -111,18 +111,21 @@ h3.typing {
         flex-direction: column; 
         align-items: center; 
         gap: 15px;
-        padding: 10px; 
+        padding: 20px; 
         min-height: auto !important;
+        max-width: 100% !important; /* Asegura que no sobrepase el contenedor */
+        overflow-x: hidden !important; /* Oculta cualquier desbordamiento horizontal */
 
         .mainContainerSobreMi {
             flex: none; 
             padding: 10px 15px; 
-            text-align: justify; 
-            width: 100%; 
+            text-align: justify;
             font-size: 1em !important;
-
+            max-width: 100% !important; /* Asegura que no sobrepase el contenedor */
+            box-sizing: border-box !important; /* Maneja el padding en el cálculo del ancho */
+            
             .tituloPrincipal {
-                font-size: 1.5rem;
+                font-size: 1.2rem !important;
                 padding-left: 0px;
             }
 
@@ -131,11 +134,12 @@ h3.typing {
                 text-align: left; 
                 margin: 0 auto; 
                 width: fit-content; 
-                display: inline-block; 
+                display: inline-block;
+                font-size: 1rem !important;
             }
 
             p {
-                font-size: 0.9em; 
+                font-size: 0.9rem !important; 
                 line-height: 1.5; 
                 padding-left: 0 !important;
             }
@@ -162,16 +166,16 @@ h3.typing {
     }
 
     h3.typing {
-        font-size: 1em; 
         text-align: center; 
-        white-space: nowrap; 
-
+        white-space: break-word;
+        
         .text {
             display: inline-block;
             white-space: nowrap;
             overflow: hidden;
             width: auto; 
-            animation: typingNew 4s steps(39, end) forwards; 
+            animation: typingNew 4s steps(39, end) forwards;
+            font-size: 0.85rem !important;
         }
 
         .cursor {
